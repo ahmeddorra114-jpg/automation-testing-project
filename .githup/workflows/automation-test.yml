@@ -3,7 +3,7 @@ name: Automation Testing Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   cypress-run:
@@ -17,4 +17,4 @@ jobs:
         run: npm install
 
       - name: Run Cypress Tests
-        run: npx cypress rungit
+        run: npx cypress run
