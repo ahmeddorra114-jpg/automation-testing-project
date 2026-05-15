@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  test:
+  cypress-run:
     runs-on: ubuntu-latest
 
     steps:
