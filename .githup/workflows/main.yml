@@ -1,4 +1,4 @@
-name: Automation Testing Pipeline
+name: Cypress Tests
 
 on:
   push:
@@ -6,15 +6,14 @@ on:
       - master
 
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Cypress Tests
+      - name: Run Cypress
         run: npx cypress run
